@@ -1,5 +1,5 @@
 site_name: crackmes.blog
-site_url: http://localhost:8000/
+site_url: https://0xada4d.github.io/crackmes.blog/
 theme:
   name: material
   icon:
