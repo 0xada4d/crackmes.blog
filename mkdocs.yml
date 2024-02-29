@@ -27,6 +27,7 @@ plugins:
       archive: false
   - tags:
       tags_file: tags.md
+  - termynal
 
 markdown_extensions:
   - pymdownx.highlight:
