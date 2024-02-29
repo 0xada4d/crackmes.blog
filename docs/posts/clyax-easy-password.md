@@ -157,7 +157,7 @@ If the entered password matches the pass-code, the "Good" message is printed to 
 
 ### Keygen
 
-```python
+```python title="keygen.py"
 
 charlist = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 

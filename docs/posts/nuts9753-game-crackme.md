@@ -62,7 +62,7 @@ The server sends a `false` response with a bad key.
 
 Opening the binary in IDA, we see the prompt for the activation key here:
 
-```
+```asm
 .text:00007FF7681370AA                 lea     rdx, aEnterTheActiva ;
 .text:00007FF7681370B1                 mov     r8d, 1Ah
 .text:00007FF7681370B7                 call    sub_7FF768137CDC
@@ -70,7 +70,7 @@ Opening the binary in IDA, we see the prompt for the activation key here:
 
 And the subsequent capturing of user input (activation key) here: 
 
-```
+```asm
 .text:00007FF7681370C7                 lea     r8, unk_7FF76817A658
 .text:00007FF7681370CE                 lea     rsi, [rsp+108h+var_70]
 .text:00007FF7681370D6                 lea     rdx, [rsp+108h+var_B0]
@@ -80,7 +80,7 @@ And the subsequent capturing of user input (activation key) here:
 
 The meat of the binary is located in function `sub_7FF768131CE9`. This section is complicated, with a ton of different paths the code can take. The most important bit that we need to keep track of is that this is where the HTTP client/server functionality resides. 
 
-```
+```asm
 .text:00007FF768137120                 call    sub_7FF768131CE9
 .text:00007FF768137125                 movzx   esi, word ptr [rsi]
 .text:00007FF768137128                 test    si, si
@@ -108,7 +108,7 @@ The meat of the binary is located in function `sub_7FF768131CE9`. This section i
 
 Notice the check performed here:
 
-```
+```asm
 .text:00007FF768137131                 cmp     [rsp+108h+var_CE], 1
 ```
 
@@ -116,14 +116,14 @@ If `rsp+108h+var_CE` equals 1, the function prints the success message, meaning 
 
 To analyze the HTTP functionality, I'll begin by finding references to the `false` string. Hopefully this gets us close to where the actual activation-key check occurs. The string has two cross references:
 
-```
+```asm
 .rdata:00007FF76817CFBE aFalse          db 'false',0            ; DATA XREF: sub_7FF76814154E+41A9↑o
 .rdata:00007FF76817CFBE                                         ; sub_7FF76814154E+4210↑o
 ```
 
 The first reference `sub_7FF76814154E+41A9` looks the most interesting:
 
-```
+```asm
 .text:00007FF7681456F0                 call    sub_7FF768136E44
 .text:00007FF7681456F5                 test    al, 1
 .text:00007FF7681456F7                 lea     rdx, aFalse     ; "false"
@@ -140,7 +140,7 @@ If the return value of `sub_7FF768136E44` is 1 (al = 1), the `true` message is p
 
 I'll put a breakpoint on `g` and run the code in the debugger to see what values are passed to the function. 
 
-```
+```asm
 .text:00007FF7681456CB                 test    rax, rax
 .text:00007FF7681456CE                 cmovz   rdx, rax
 .text:00007FF7681456D2                 mov     rcx, rax
@@ -160,7 +160,7 @@ r9 = [rsp+40h+arg_1B8] = 10 (decimal)
 
  I entered "test" as the activation code in the terminal. It looks as if the function takes two strings and their lengths as input (4 parameters), probably for comparison purposes. Checking the disassembly for `sub_7FF768136E44` confirms our suspicions:
 
-```
+```asm
 .text:00007FF768136E44                 cmp     rdx, r9
 .text:00007FF768136E47                 jnz     short loc_7FF768136E6B
 .text:00007FF768136E49                 cmp     rcx, r8
@@ -183,7 +183,7 @@ Let's test this value.
 
 Tracing the instructions back further, we find `r8` loaded with the value of the key here:
 
-```
+```asm
 .text:00007FF768137B0F                 call    sub_7FF76813CFD8
 .text:00007FF768137B14                 mov     r8, [rsp+2E8h+var_2B0]
 .text:00007FF768137B19                 mov     r9, [rsp+2E8h+var_2A0]
@@ -203,7 +203,7 @@ Enter the codes:
 
 The key works. Now the game begins, and requests two codes. Following the disassembly in the `start` routine, we see two candidates for codes:
 
-```
+```asm
 .text:00007FF76813727D                 lea     r8, aCode1f019  ; "code@1F019"
 .text:00007FF768137284                 call    sub_7FF768136E44
 .text:00007FF768137289                 test    al, 1
@@ -246,7 +246,7 @@ The actual calculation of this key value occurs in the instructions below. First
 
 The final key is stored in the stack variable: `rsp+r8+2E8h+var_298+0Fh`. In my analysis of the program, this key has been between 8 and 10 bytes. 
 
-```
+```asm
 .text:00007FF7681378D5                 lea     rcx, [rsp+2E8h+var_E8]
 .text:00007FF7681378DD                 lea     rdi, [rsp+2E8h+name]
 .text:00007FF7681378E2                 mov     r8d, 4
@@ -287,7 +287,7 @@ It is my determination that `sub_7FF768159A28` is actually the Windows API funct
 
 Returning to the call of the comparison function discussed earlier:
 
-```
+```asm
 .text:00007FF7681456CB                 test    rax, rax
 .text:00007FF7681456CE                 cmovz   rdx, rax
 .text:00007FF7681456D2                 mov     rcx, rax
@@ -300,7 +300,7 @@ Returning to the call of the comparison function discussed earlier:
 
 and scrolling up in the disassembly with `arg_1B0` selected, shows where the activation key value is used in other areas of the program. A hint is provided at `00007FF7681448DF` that this value might also be used as a session ID. 
 
-```
+```asm
 .text:00007FF7681448C4                 mov     rax, [rsp+40h+arg_1B8]
 .text:00007FF7681448CC                 mov     [rsp+40h+var_20], rax
 .text:00007FF7681448D1                 mov     r8d, 0Ah
@@ -354,13 +354,4 @@ Enter the codes in the "code1, code2" format
 --------------------------------------------
 Enter the codes: code@1F019,code@00111010_00110011
 Congratulations!!! :3
-```
-
-
-***
-
-### Keygen
-
-```python
-
 ```

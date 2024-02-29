@@ -87,7 +87,7 @@ The program then takes the user input and encodes each byte:
 .text:00000001400031E7                 mov     [rsp+rcx+948h+Buffer], al
 ```
 
-i.e. `INPUT[i] = (INPUT[i] ^ 0xFF) + OxF
+i.e. `INPUT[i] = (INPUT[i] ^ 0xFF) + OxF`
 
 The program takes this XOR encoded key and appends it to the time string with another call to `vsprintf`:
 
@@ -116,7 +116,7 @@ many, many lines of bit-shifting, multiplication, division, etc
 ```
 
 Appended to this walkthrough is my failed attempt at writing this algorithm in C: 
-`Keygen - Non-Working`
+[Keygen - Non-Working](#keygen-non-working)
 
 I spent a lot of time debugging this code but I can't get it to work. If someone reads this and gets the algorithm to work, I'd appreciate you commenting and telling me what I did wrong (probably a lot). 
 
@@ -166,11 +166,9 @@ Secret code accepted. Verification successful.
 
 ***
 
-### Keygen - working
+### Keygen - Working
 
-```javascript
-
-// keygen.js
+```javascript title="keygen.js"
 
 // Process:
 // Launch ObfuscationFiesta.exe in a terminal
@@ -191,7 +189,7 @@ Interceptor.attach(codePtr, function() {
 
 
 ***
-### Keygen - non-working
+### Keygen - Non-Working
 
 ```c
 #define _CRT_SECURE_NO_WARNINGS

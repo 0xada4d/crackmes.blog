@@ -31,7 +31,7 @@ Bad
 
 The program begins by requesting the username from the user with the first call to `fgets`:
 
-```
+```asm
 .text:00000001400010EF                 mov     r8, rax         ; Stream
 .text:00000001400010F2                 lea     edx, [rsi+64h]  ; MaxCount
 .text:00000001400010F5                 lea     rcx, [rsp+0B8h+Buffer] ; Buffer
@@ -40,7 +40,7 @@ The program begins by requesting the username from the user with the first call 
 
 The username is stored on the stack at `rsp+0B8h+Buffer`. The program calculates the length of the supplied username and stores the value in `rdi`:
 
-```
+```asm
 .text:0000000140001111                 inc     rdi
 .text:0000000140001114                 cmp     [rax+rdi], sil
 .text:0000000140001118                 jnz     short loc_140001111
@@ -49,7 +49,7 @@ The username is stored on the stack at `rsp+0B8h+Buffer`. The program calculates
 
 Next, the program uses the C++ `std::cin` to get the password:
 
-```
+```asm
 .text:0000000140001135                 mov     rcx, cs:?cin@std... 
 .text:000000014000113C                 lea     rdx, [rsp+0B8h+var_98]
 .text:0000000140001141                 call    cs:??5?$basic_istream@...
@@ -59,7 +59,7 @@ The password is stored at `rsp+0B8h+var_98`.
 
 The next portion of the disassembly was slightly confusing at first, but this is where the program checks that the user supplied an integer as a password:
 
-```
+```asm
 .text:0000000140001151                 mov     rcx, [rax]
 .text:0000000140001154                 movsxd  rdx, dword ptr [rcx+4]
 .text:0000000140001158                 test    byte ptr [rdx+rax+10h], 6
@@ -68,7 +68,7 @@ The next portion of the disassembly was slightly confusing at first, but this is
 
 Assuming the user supplies an integer password, the program checks that the username actually contains data. Then based on the length of the username, branches to one of two locations to begin the calculation of the correct password.
 
-```
+```asm
 .text:00007FF7F93A11DC                 lea     rax, [rsp+0B8h+Buffer]
 .text:00007FF7F93A11E1                 cmp     rax, rbp
 .text:00007FF7F93A11E4                 cmova   rdi, rsi
@@ -80,7 +80,7 @@ Assuming the user supplies an integer password, the program checks that the user
 
 If the username string is less than 8 bytes (including the `\n`) the program branches here and calculates the sum of the ASCII values of the username characters:
 
-```
+```asm
 .text:00007FF7F93A1260                 movsx   eax, byte ptr [rbx]
 .text:00007FF7F93A1263                 inc     rbx
 .text:00007FF7F93A1266                 add     esi, eax
@@ -92,7 +92,7 @@ If the username string is greater than 8 bytes the floating point registers are 
 
 Finally the sum of the ASCII characters in the username is checked against the integer provided as the password. Assuming the two values are equal, the program prints the `Correct Password` message.
 
-```
+```asm
 .text:00007FF7F93A126D                 cmp     [rsp+0B8h+var_98], esi
 .text:00007FF7F93A1271                 lea     rax, aBad       ; "Bad\n"
 .text:00007FF7F93A1278                 lea     rcx, aCorrectPasswor ; 
@@ -102,7 +102,7 @@ Finally the sum of the ASCII characters in the username is checked against the i
 
 ### Keygen
 
-```python
+```python title="keygen.py"
 def generate_code(username):
 	total = 0
 	for ch in username:

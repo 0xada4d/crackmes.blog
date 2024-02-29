@@ -33,13 +33,13 @@ Wrong flag
 
 At the beginning of the program, a pointer to the command line arguments (ARGV) is stored in the local variable `var_A0`:
 
-```
+```asm
 .text:0000000000001176                 mov     [rbp+var_A0], rsi
 ```
 
 The program then calculates the length of the value stored at `var_A0 + 8`. This represents ARGV[1], the flag supplied by the user. If the flag is not 21 characters exactly, the program exits.
 
-```
+```asm
 .text:00000000000011AB                 mov     rax, [rbp+var_A0]
 .text:00000000000011B2                 add     rax, 8
 .text:00000000000011B6                 mov     rax, [rax]
@@ -52,7 +52,7 @@ The program then calculates the length of the value stored at `var_A0 + 8`. This
 
 Next the program takes a string from the `.rodata` section: `sup3r_s3cr3t_k3y_1337`, subtracts `0x22` from each character, and stores the resulting characters in the variable `var_20`. This data will be used later to test the flag supplied by the user.
 
-```
+```asm
 .text:00000000000011DD                 lea     rax, aSup3rS3cr3tK3y
 .text:00000000000011E4                 mov     [rbp+var_88], rax
 .text:00000000000011EB                 mov     [rbp+var_90], 0
@@ -80,7 +80,7 @@ RESULT = var_20[i] ^ FLAG[i]
 
 If the result matches the character stored in `rbp+var_80[i]` the loop continues; otherwise the program exits printing `Wrong flag`.
 
-```
+```asm
 .text:00000000000012CD                 mov     rax, [rbp+var_A0]
 .text:00000000000012D4                 add     rax, 8
 .text:00000000000012D8                 mov     rdx, [rax]
@@ -125,7 +125,7 @@ Reference the keygen below or in keygen.py.
 
 ### Keygen
 
-```python
+```python title="keygen.py"
 def transform(data):
         OUT = []
         for ch in data:
