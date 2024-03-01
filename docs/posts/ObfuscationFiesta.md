@@ -115,10 +115,16 @@ many, many lines of bit-shifting, multiplication, division, etc
 ...
 ```
 
+***
+
+#### Aside
+
 Appended to this walkthrough is my failed attempt at writing this algorithm in C: 
 [Keygen - Non-Working](#keygen-non-working)
 
 I spent a lot of time debugging this code but I can't get it to work. If someone reads this and gets the algorithm to work, I'd appreciate you commenting and telling me what I did wrong (probably a lot). 
+
+***
 
 The final result of the calculation is stored here:
 

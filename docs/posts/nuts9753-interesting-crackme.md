@@ -34,7 +34,7 @@ The code is incorrect!
 
 Near the beginning of the `start` function, we find the request for the code:
 
-```
+```asm
 .text:0000000140001209                 lea     rdx, aEnterTheCode 
 .text:0000000140001210                 mov     r8d, 10h
 .text:0000000140001216                 call    sub_140001AB0
@@ -42,7 +42,7 @@ Near the beginning of the `start` function, we find the request for the code:
 
 The program reads the input data from STDIN one byte at a time using the Windows `ReadFile` function:
 
-```
+```asm
 .text:000000014000127E                 and     [rsp+40h+var_20], 0
 .text:0000000140001284                 mov     rcx, rsi        ; hFile
 .text:0000000140001287                 mov     rdx, rbx        ; lpBuffer
@@ -55,7 +55,7 @@ The user input is stored as an array of characters in the `.debug` segment of th
 
 To calculate the actual code, the program first calls `GetCurrentDirectoryW`:
 
-```
+```asm
 .text:0000000140001533                 lea     rdx, [rsp+40h+NumberOfBytesRead] 
 .text:000000014000153B                 mov     ecx, 7FFFh      ; nBufferLength
 .text:0000000140001540                 call    GetCurrentDirectoryW
@@ -63,7 +63,7 @@ To calculate the actual code, the program first calls `GetCurrentDirectoryW`:
 
 This function returns the fully qualified path (Unicode) to the directory from which `crackme.exe` was executed. After converting this value from Unicode to ASCII, the program reverses the order of the bytes of the string:
 
-```
+```asm
 .text:0000000140001784                 cmp     rax, rdx
 .text:0000000140001787                 jz      short loc_1400017C4
 .text:0000000140001789                 mov     r8b, [r11+rdx]
@@ -77,7 +77,7 @@ This function returns the fully qualified path (Unicode) to the directory from w
 
 The program takes the reversed directory string and enters a loop to calculate the secret code. For each byte of the reversed string, the loop calculates an offset into a dictionary string, and returns two bytes from that dictionary.
 
-```
+```asm
 .text:00000001400018DF                 cmp     bpl, 64h ; 'd'
 .text:00000001400018E3                 jb      short loc_140001902
 .text:00000001400018E5                 movzx   eax, bpl
@@ -89,7 +89,7 @@ The program takes the reversed directory string and enters a loop to calculate t
 
 The dictionary is defined in the `.rdata` section:
 
-```
+```asm
 .rdata:0000000140003150 a00010203040506 db '00010203040506070809101112131415161718192021222324252627282930313'
 .rdata:0000000140003150                                         
 .rdata:0000000140003191                 db '23334353637383940414243444546474849505152535455565758596061626364'
@@ -99,7 +99,7 @@ The dictionary is defined in the `.rdata` section:
 
 When the current byte value is larger that `0x64`, the program appends a third byte to the bytes returned from the dictionary. 
 
-```
+```asm
 .text:0000000140001902                 cmp     bpl, 9
 .text:0000000140001906                 ja      short loc_140001913
 .text:0000000140001908                 add     bpl, 30h ; '0'
@@ -116,7 +116,7 @@ When the loop counter is odd (`i % 2 != 0`), the program adds a space (`0x20`) t
 
 The important validation occurs here:
 
-```
+```asm
 .text:000000014000199E                 mov     rcx, [rsp+40h+arg_88]
 .text:00000001400019A6                 mov     rdx, [rsp+40h+arg_90]
 .text:00000001400019AE                 lea     r8, unk_1400030C0
