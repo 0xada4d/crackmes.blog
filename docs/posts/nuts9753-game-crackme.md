@@ -138,7 +138,7 @@ The first reference `sub_7FF76814154E+41A9` looks the most interesting:
 
 If the return value of `sub_7FF768136E44` is 1 (al = 1), the `true` message is passed to `sub_7FF7681413F7`. Otherwise the `false` message is passed. 
 
-I'll put a breakpoint on `g` and run the code in the debugger to see what values are passed to the function. 
+I'll put a breakpoint on `sub_7FF768136E44` and run the code in the debugger to see what values are passed to the function. 
 
 ```asm
 .text:00007FF7681456CB                 test    rax, rax
