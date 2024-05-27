@@ -7,7 +7,7 @@
 <!-- termynal -->
 
 ```
-$ ida64 crackme.exe
+$ BinaryNinja crackme.exe
 ---> 100%
 Begin analysis now.
 ```
