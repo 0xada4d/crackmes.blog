@@ -1,0 +1,702 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://crackmes.blog/2024/02/11/basic-password-challenge/">
+      
+      
+        <link rel="prev" href="../../10/easy-password-reverse-2/">
+      
+      
+        <link rel="next" href="../FLAG/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>RE Challenge: cutypie's Basic Password Challenge on crackmes.one - crackmes.blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../termynal.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#re-challenge-cutypies-basic-password-challenge-on-crackmesone" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="crackmes.blog" class="md-header__button md-logo" aria-label="crackmes.blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M9.4 86.6c-12.5-12.5-12.5-32.7 0-45.2s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256zM256 416h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            crackmes.blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RE Challenge: cutypie's Basic Password Challenge on crackmes.one
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="lime"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../tags/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tags
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../category/reverse-engineering/" class="md-tabs__link">
+          
+  
+  
+  Categories
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="crackmes.blog" class="md-nav__button md-logo" aria-label="crackmes.blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M9.4 86.6c-12.5-12.5-12.5-32.7 0-45.2s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256zM256 416h288c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+
+    </a>
+    crackmes.blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tags
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/reverse-engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reverse Engineering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../.." class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2024-02-11 00:00:00+00:00" class="md-ellipsis">February 11, 2024</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/reverse-engineering/">Reverse Engineering</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              2 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+            
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#binary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keygen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keygen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <a href="../../../../tags/#tag:crackmesone" class="md-tag">crackmes.one</a>
+      
+    
+      
+      
+      
+        <a href="../../../../tags/#tag:x86_64" class="md-tag">x86_64</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="re-challenge-cutypies-basic-password-challenge-on-crackmesone">RE Challenge: cutypie's Basic Password Challenge <a href="https://crackmes.one/crackme/65bfedcaeef082e477ff66aa">on crackmes.one</a></h1>
+<h3 id="binary">Binary</h3>
+<div class="highlight"><pre><span></span><code>Name: basic.exe
+Application Type: Windows(Vista)[AMD64, 64-bit, Console]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$ .\basic.exe
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Username: test
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Enter your password: test
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Invalid input. Please enter a valid unsigned integer: 1111
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Bad
+</code></pre></div>
+<!-- more -->
+
+<h3 id="analysis">Analysis</h3>
+<p>The program begins by requesting the username from the user with the first call to <code>fgets</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nl">.text:</span><span class="err">00000001400010</span><span class="nf">EF</span><span class="w">                 </span><span class="no">mov</span><span class="w">     </span><span class="no">r8</span><span class="p">,</span><span class="w"> </span><span class="no">rax</span><span class="w">         </span><span class="c1">; Stream</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nl">.text:</span><span class="err">00000001400010</span><span class="nf">F2</span><span class="w">                 </span><span class="no">lea</span><span class="w">     </span><span class="no">edx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rsi</span><span class="err">+</span><span class="mi">64</span><span class="no">h</span><span class="p">]</span><span class="w">  </span><span class="c1">; MaxCount</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nl">.text:</span><span class="err">00000001400010</span><span class="nf">F5</span><span class="w">                 </span><span class="no">lea</span><span class="w">     </span><span class="no">rcx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rsp</span><span class="err">+</span><span class="mi">0</span><span class="no">B8h</span><span class="err">+</span><span class="no">Buffer</span><span class="p">]</span><span class="w"> </span><span class="c1">; Buffer</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nl">.text:</span><span class="err">00000001400010</span><span class="nf">FA</span><span class="w">                 </span><span class="no">call</span><span class="w">    </span><span class="no">cs</span><span class="p">:</span><span class="no">fgets</span>
+</code></pre></div>
+<p>The username is stored on the stack at <code>rsp+0B8h+Buffer</code>. The program calculates the length of the supplied username and stores the value in <code>rdi</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nl">.text:</span><span class="err">0000000140001111</span><span class="w">                 </span><span class="nf">inc</span><span class="w">     </span><span class="no">rdi</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nl">.text:</span><span class="err">0000000140001114</span><span class="w">                 </span><span class="nf">cmp</span><span class="w">     </span><span class="p">[</span><span class="no">rax</span><span class="err">+</span><span class="no">rdi</span><span class="p">],</span><span class="w"> </span><span class="no">sil</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nl">.text:</span><span class="err">0000000140001118</span><span class="w">                 </span><span class="nf">jnz</span><span class="w">     </span><span class="no">short</span><span class="w"> </span><span class="no">loc_140001111</span>
+</code></pre></div>
+<p>Next, the program uses the C++ <code>std::cin</code> to get the password:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nl">.text:</span><span class="err">0000000140001135</span><span class="w">                 </span><span class="nf">mov</span><span class="w">     </span><span class="no">rcx</span><span class="p">,</span><span class="w"> </span><span class="no">cs</span><span class="p">:</span><span class="err">?</span><span class="no">cin@std...</span><span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="no">.text</span><span class="p">:</span><span class="mi">000000014000113</span><span class="no">C</span><span class="w">                 </span><span class="no">lea</span><span class="w">     </span><span class="no">rdx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rsp</span><span class="err">+</span><span class="mi">0</span><span class="no">B8h</span><span class="err">+</span><span class="no">var_98</span><span class="p">]</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nl">.text:</span><span class="err">0000000140001141</span><span class="w">                 </span><span class="nf">call</span><span class="w">    </span><span class="no">cs</span><span class="p">:</span><span class="err">??</span><span class="mi">5</span><span class="err">?</span><span class="no">$basic_istream@...</span>
+</code></pre></div>
+<p>The password is stored at <code>rsp+0B8h+var_98</code>.</p>
+<p>The next portion of the disassembly was slightly confusing at first, but this is where the program checks that the user supplied an integer as a password:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nl">.text:</span><span class="err">0000000140001151</span><span class="w">                 </span><span class="nf">mov</span><span class="w">     </span><span class="no">rcx</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rax</span><span class="p">]</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nl">.text:</span><span class="err">0000000140001154</span><span class="w">                 </span><span class="nf">movsxd</span><span class="w">  </span><span class="no">rdx</span><span class="p">,</span><span class="w"> </span><span class="no">dword</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">rcx</span><span class="err">+</span><span class="mi">4</span><span class="p">]</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nl">.text:</span><span class="err">0000000140001158</span><span class="w">                 </span><span class="nf">test</span><span class="w">    </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">rdx</span><span class="err">+</span><span class="no">rax</span><span class="err">+</span><span class="mi">10</span><span class="no">h</span><span class="p">],</span><span class="w"> </span><span class="mi">6</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nl">.text:</span><span class="err">000000014000115</span><span class="nf">D</span><span class="w">                 </span><span class="no">jz</span><span class="w">      </span><span class="no">short</span><span class="w"> </span><span class="no">loc_1400011C6</span>
+</code></pre></div>
+<p>Assuming the user supplies an integer password, the program checks that the username actually contains data. Then based on the length of the username, branches to one of two locations to begin the calculation of the correct password.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A11DC</span><span class="w">                 </span><span class="no">lea</span><span class="w">     </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="no">rsp</span><span class="err">+</span><span class="mi">0</span><span class="no">B8h</span><span class="err">+</span><span class="no">Buffer</span><span class="p">]</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A11E1</span><span class="w">                 </span><span class="no">cmp</span><span class="w">     </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="no">rbp</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A11E4</span><span class="w">                 </span><span class="no">cmova</span><span class="w">   </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="no">rsi</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A11E8</span><span class="w">                 </span><span class="no">test</span><span class="w">    </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="no">rdi</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A11EB</span><span class="w">                 </span><span class="no">jz</span><span class="w">      </span><span class="no">short</span><span class="w"> </span><span class="no">loc_7FF7F93A125A</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A11ED</span><span class="w">                 </span><span class="no">cmp</span><span class="w">     </span><span class="no">rdi</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A11F1</span><span class="w">                 </span><span class="no">jb</span><span class="w">      </span><span class="no">short</span><span class="w"> </span><span class="no">loc_7FF7F93A125A</span>
+</code></pre></div>
+<p>If the username string is less than 8 bytes (including the <code>\n</code>) the program branches here and calculates the sum of the ASCII values of the username characters:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A1260</span><span class="w">                 </span><span class="no">movsx</span><span class="w">   </span><span class="no">eax</span><span class="p">,</span><span class="w"> </span><span class="no">byte</span><span class="w"> </span><span class="no">ptr</span><span class="w"> </span><span class="p">[</span><span class="no">rbx</span><span class="p">]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A1263</span><span class="w">                 </span><span class="no">inc</span><span class="w">     </span><span class="no">rbx</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A1266</span><span class="w">                 </span><span class="no">add</span><span class="w">     </span><span class="no">esi</span><span class="p">,</span><span class="w"> </span><span class="no">eax</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A1268</span><span class="w">                 </span><span class="no">cmp</span><span class="w">     </span><span class="no">rbx</span><span class="p">,</span><span class="w"> </span><span class="no">rbp</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A126B</span><span class="w">                 </span><span class="no">jnz</span><span class="w">     </span><span class="no">short</span><span class="w"> </span><span class="no">loc_7FF7F93A1260</span>
+</code></pre></div>
+<p>If the username string is greater than 8 bytes the floating point registers are used to perform the calculation. </p>
+<p>Finally the sum of the ASCII characters in the username is checked against the integer provided as the password. Assuming the two values are equal, the program prints the <code>Correct Password</code> message.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A126D</span><span class="w">                 </span><span class="no">cmp</span><span class="w">     </span><span class="p">[</span><span class="no">rsp</span><span class="err">+</span><span class="mi">0</span><span class="no">B8h</span><span class="err">+</span><span class="no">var_98</span><span class="p">],</span><span class="w"> </span><span class="no">esi</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A1271</span><span class="w">                 </span><span class="no">lea</span><span class="w">     </span><span class="no">rax</span><span class="p">,</span><span class="w"> </span><span class="no">aBad</span><span class="w">       </span><span class="c1">; &quot;Bad\n&quot;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A1278</span><span class="w">                 </span><span class="no">lea</span><span class="w">     </span><span class="no">rcx</span><span class="p">,</span><span class="w"> </span><span class="no">aCorrectPasswor</span><span class="w"> </span><span class="c1">; </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A127F</span><span class="w">                 </span><span class="no">cmovnz</span><span class="w">  </span><span class="no">rcx</span><span class="p">,</span><span class="w"> </span><span class="no">rax</span><span class="w">        </span><span class="c1">; Format</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nl">.text:</span><span class="err">00007</span><span class="nf">FF7F93A1283</span><span class="w">                 </span><span class="no">call</span><span class="w">    </span><span class="no">sub_7FF7F93A1010</span>
+</code></pre></div>
+<h3 id="keygen">Keygen</h3>
+<div class="highlight"><span class="filename">keygen.py</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">generate_code</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">username</span><span class="p">:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="n">total</span> <span class="o">+=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="n">total</span> <span class="o">+=</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Password -&gt; </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>        <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter username: &quot;</span><span class="p">)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>        <span class="n">generate_code</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../../termynal.js"></script>
+      
+    
+  </body>
+</html>
